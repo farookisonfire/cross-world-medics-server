@@ -4,6 +4,7 @@ const mapAnswersToQuestions = require('../helpers/typeform');
 module.exports = {
   getUsers: async (req, res, next) => {
     console.log('users controller - get users');
+    res.status(200).send('/get user endpoint hit')
   },
 
   submit: async (req, res, next) => {
