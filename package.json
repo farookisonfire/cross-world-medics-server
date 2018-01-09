@@ -25,7 +25,8 @@
     "moment": "^2.20.1",
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
-    "nodemon": "^1.14.9"
+    "nodemon": "^1.14.9",
+    "uuid": "^3.1.0"
   },
   "engines": {
     "node": "8.9.4"
