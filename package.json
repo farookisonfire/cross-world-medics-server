@@ -20,12 +20,14 @@
   "homepage": "https://github.com/farookkhan/cross-world-medics-server#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-promise-router": "^2.0.0",
     "moment": "^2.20.1",
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
     "nodemon": "^1.14.9",
+    "stripe": "^5.4.0",
     "uuid": "^3.1.0"
   },
   "engines": {

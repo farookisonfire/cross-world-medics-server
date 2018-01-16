@@ -23,7 +23,8 @@ const userSchema = new Schema({
   selectYourPreferredProgramFocus: [String],
   howDidYouHearAboutCwm: String,
   pleaseSpecifyAnswer70812140: String,
-  whyDoYouWantToJoinCwm: String
+  whyDoYouWantToJoinCwm: String,
+  selectedProgramId: String
 })
 
 const User = mongoose.model('user', userSchema);
