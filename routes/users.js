@@ -6,6 +6,9 @@ const UsersController = require('../controllers/users');
 router.route('/')
   .get(UsersController.getUsers);
 
+router.route('/:userId')
+  .get(UsersController.getUser);
+
 router.route('/submit')
   .post(UsersController.submit);
 

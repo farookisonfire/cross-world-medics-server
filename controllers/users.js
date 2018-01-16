@@ -2,6 +2,16 @@ const User = require('../models/user');
 const mapAnswersToQuestions = require('../helpers/typeform');
 
 module.exports = {
+  getUser: async (req, res, next) => {
+    const userID = req.params.userId;
+    const user = await User.findOne({ userId: userID })
+    if (!user) return res.status(500).json({ user: 'noUser'});
+    const { firstName, status, userId } = user;
+    const userData = { firstName, status, userId };
+    console.log('USER DATA TO CLIENT -->', userData);
+    return res.json(userData);
+  },
+  
   getUsers: async (req, res, next) => {
     console.log('users controller - get users');
     res.status(200).send('/get user endpoint hit')
