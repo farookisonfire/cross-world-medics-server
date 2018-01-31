@@ -14,8 +14,6 @@ module.exports = {
 
     const stripeToken = token.id;
     const email = token.email
-    
-    console.log('SELECTED PROGRAM ID --->', selectedProgramId);
 
     const chargeDetails = {
       email,
@@ -29,5 +27,12 @@ module.exports = {
       .then((nextStatus) => User.findOneAndUpdate({ userId }, { $set: { status: nextStatus, selectedProgramId }}, { new: true, upsert: true }))
       .then((updatedUser) => res.status(200).json({ nextStatus: updatedUser.status, selectedProgramId }))
       .catch(() => res.status(500).send('charge failed'))
+  },
+  donation: (req, res, next) => {
+    const { customerDetails, token } = req.body;
+
+    handleCharge(token, customerDetails)
+      .then(() => res.status(200).send('payment success'))
+      .catch(() => res.status(500).send('payment fail'));
   }
 }
