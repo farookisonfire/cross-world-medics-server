@@ -34,7 +34,7 @@ module.exports = {
     handleCharge(token, customerDetails)
       .then(() => res.status(200).send('payment success'))
       .catch((err) => {
-        console.log('err');
+        console.log('payment fail error', err);
         res.status(500).send('payment fail')
       });
   }
