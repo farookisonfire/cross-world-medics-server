@@ -28,7 +28,7 @@ module.exports = {
       .then((updatedUser) => res.status(200).json({ nextStatus: updatedUser.status, selectedProgramId }))
       .catch(() => res.status(500).send('charge failed'))
   },
-  donation: (req, res, next) => {
+  payment: (req, res, next) => {
     const { customerDetails, token } = req.body;
 
     handleCharge(token, customerDetails)
