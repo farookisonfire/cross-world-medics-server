@@ -6,7 +6,7 @@ const CheckoutController = require('../controllers/checkout');
 router.route('/')
   .post(CheckoutController.charge);
 
-router.route('/donate')
-  .post(CheckoutController.donation);
+router.route('/payment')
+  .post(CheckoutController.payment);
 
 module.exports = router;
