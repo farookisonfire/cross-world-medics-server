@@ -1,4 +1,4 @@
-const secret = process.env.STRIPE_SECRET_KEY || "sk_test_6m55BYyH2L1xa7j9uboViaNq";
+const secret = process.env.STRIPE_SECRET_KEY || "sk_test_qdkgru5QBQHPHo3MxG4jdfeL";
 const stripe = require("stripe")(secret);
 
 const handleCharge = (token, chargeDetails) => {
