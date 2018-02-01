@@ -5,7 +5,7 @@ const handleCharge = (token, chargeDetails) => {
   const {
     email,
     amount,
-    description = 'Enrollment Fee Payment'
+    description = 'Cross World Medics - Enrollment Fee Payment'
   } = chargeDetails
 
   return stripe.customers.create({
